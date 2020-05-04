@@ -1,0 +1,30 @@
+/**************************************
+	
+	BROWSER HACKS
+
+***************************************/
+
+/* for chrome on mac */
+.mac {
+
+}
+
+/* ie */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.btn, 
+	input.btn, 
+	button.btn {
+		padding-top: 7px;
+	}
+}
+
+
+@supports (-ms-ime-align: auto)  {
+
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  and (max-width: 768px) {
+
+}
+

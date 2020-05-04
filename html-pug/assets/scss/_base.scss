@@ -1,0 +1,159 @@
+/**************************************
+	
+	BASE
+
+***************************************/
+/* ---------------------------------------------------------
+スタイルリセット
+----------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+}
+
+h1,h2,h3,h4,h5,h6,td,th,p,ul,li,dt,dd {
+	font-size: 1em;
+	line-height: 1;
+}
+
+ul li {
+	list-style: none;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section { 
+	display:block;
+}
+
+body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+section {
+	line-height: 0;
+}
+
+img{
+	width: 100%;
+}
+
+a {
+	display: block;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	text-decoration: none;
+	color: #000;
+}
+
+b {
+	font-weight: 600;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 100%;
+  box-sizing: border-box;
+}
+
+button {
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.5s ease;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	backface-visibility: hidden;
+}
+
+*:focus {
+	outline: none;
+}
+
+/* ---------------------------------------------------------
+変数
+----------------------------------------------------------*/
+/*break point
+-----------------------*/
+$pcSize: 1440px;
+$pcMin: 1100px;
+$pcMin2: 1200px;
+$mobileSize: 768px;
+$pcMidBreak: 900px;
+$contentSizeWide: 1100px;
+$maxMobile: 640px;
+
+/*color
+-----------------------*/
+$white: #fff;
+$dirtywhite: #fbeee8;
+$black: #000;
+$shadow: #1f1f1f;
+$lavender: #805998;
+$lavender-light: #E4DFE8;
+$green: #458E29;
+$gray: #9B9B9B;
+$yellow: #FFD54A;
+$tprimary: #707070;
+
+
+
+/*font family
+-----------------------*/
+// @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+@import url("https://use.typekit.net/zyh2suh.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
+
+@font-face {
+	font-family: "American Typewriter"; 
+	src: url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.eot"); 
+	src: url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.eot?#iefix") format("embedded-opentype"), 
+	url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.woff2") format("woff2"), 
+	url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.woff") format("woff"), 
+	url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.ttf") format("truetype"), 
+	url("//db.onlinewebfonts.com/t/940ace70d6c766e685a20dea33762abf.svg#American Typewriter") 
+	format("svg"); 
+}
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$primary: 'Noto Sans JP', sans-serif;
+$lato: 'Lato', sans-serif;
+$notoSerif: 'Noto Serif JP', serif;
+$yumincho: yu-mincho-pr6n, sans-serif, "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, "Noto Serif JP", serif;
+$serif: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif, "Noto Serif JP", serif;
+$prata: 'Prata', serif;
+$atypewriter: 'American Typewriter', serif;
+// $garamond:  'EB Garamond', serif;
+$garamond:  'garamond-fb-display', serif;
