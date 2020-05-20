@@ -1,0 +1,32 @@
+@import "_base/variable"; // 変数定義
+@import "_base/font"; // @font-face
+@import "_base/reset"; // ブラウザのstyleをリセット
+@import "_base/animation"; // @keyframes
+
+@import "_mixin/fontFeature"; // Emmetに無いマイナーなプロパティのmix-in化
+@import "_mixin/fontSmoothing"; // Emmetに無いマイナーなプロパティのmix-in化
+@import "_mixin/u-mediaquery"; // media query
+@import "_mixin/u-trs"; // transition
+@import "_mixin/u-browserHack"; // IE・Edgeなどのブラウザハックコード
+@import "_mixin/u-hover"; // hover action
+@import "_mixin/u-imgText"; // HTMLにはテキストを書いてCSSで非表示にする時に使う
+@import "_mixin/u-flex"; // flexのコードを1行にまとめる用途
+@import "_mixin/u-arrow"; // 90°の矢印(::before, ::afterにincludeする)
+@import "_mixin/u-formParts"; // form要素のstyle
+@import "_mixin/u-contentCenter"; // コンテンツ幅
+@import "_mixin/u-visualEditArea"; // ビジュアルエディタで書かれたコンテンツのタグに当てるstyle
+@import "_mixin/u-secTitle";// セクションタイトルのstyle
+@import "_mixin/u-articleText";// 本文テキストのstyle
+@import "_mixin/u-bnr"; // バナーのstyle
+
+@import "_modules/siteHeader"; // HEADER
+@import "_modules/siteFooter"; // FOOTER
+@import "_modules/contactFormArea"; // フォームエリア
+
+@import "common"; // <body>やPC・SP出し分けなどのstyle
+
+@import "_pages/topPage"; // トップページ
+@import "_pages/archiveNewsPage"; // NEWS一覧ページ
+@import "_pages/singleNewsPage"; // NEWS詳細ページ
+@import "_pages/pageCompanyPage"; // 会社ページ
+@import "_pages/pageContactPage"; // お問い合わせページ

@@ -1,0 +1,60 @@
+/*====================================================================
+contactFormArea
+====================================================================*/
+.contactFormArea {
+
+  &__inputArea {
+
+  }
+
+  &__inputArea__formPartsList {
+
+  }
+
+  &__inputArea__formPartsList__item {
+    @include u-flex;
+  }
+
+  &__inputArea__formPartsList__item__head {
+    width: 100px;
+  }
+
+  &__inputArea__formPartsList__item__data {
+    width: calc(99% - 100px);
+  }
+
+  &__inputArea__formPartsList__item__head__text {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+
+  &__inputArea__formPartsList__item__data__textBoxWrap {
+    @include u-textBoxWrap;
+  }
+
+
+  // submitArea
+  &__submitArea {
+
+  }
+
+  &__submitArea__chackBoxWrap {
+
+  }
+
+  &__submitArea__returnBtnWrap {
+
+  }
+
+  &__submitArea__submitBtnWrap {
+
+  }
+}
+
+/*-----------------------------------------------
+contactFormArea(SP)
+------------------------------------------------*/
+@include u-mqMax {
+  .contactFormArea {}
+}

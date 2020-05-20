@@ -1,0 +1,38 @@
+/*====================================================================
+pageCompanyPageContentSec
+====================================================================*/
+.pageCompanyPageContentSec {
+  padding: 50px 0;
+
+  &__innerArea {
+    @include u-contentCenter;
+  }
+
+  &__innerArea__pageTitle {
+    @include u-secTitle;
+  }
+
+  &__innerArea__childPageList {
+    margin-top: 40px;
+  }
+
+  &__innerArea__childPageList__item {
+    margin-top: 20px;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  &__innerArea__childPageList__item__link {
+    @include u-trsPC;
+    @include u-hoverOp;
+  }
+}
+
+/*-----------------------------------------------
+pageCompanyPageContentSec(SP)
+------------------------------------------------*/
+@include u-mqMax {
+  .pageCompanyPageContentSec {}
+}

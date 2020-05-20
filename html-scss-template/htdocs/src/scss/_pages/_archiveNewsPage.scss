@@ -1,0 +1,74 @@
+/*====================================================================
+archiveNewsPageContentSec
+====================================================================*/
+.archiveNewsPageContentSec {
+  padding: 50px 0;
+
+  &__innerArea {
+    @include u-contentCenter;
+  }
+
+  &__innerArea__pageTitle {
+    @include u-secTitle;
+  }
+
+  &__innerArea__postList {
+    margin-top: 40px;
+    @include u-flex($fw: wrap);
+  }
+
+  &__innerArea__postList__item {
+    width: calc((99% - (30px * (4 - 1))) / 4);
+    margin: 30px 0 0 30px;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+  }
+
+  &__innerArea__postList__item__link {
+    @include u-trsPC;
+    @include u-hoverOp;
+    display: block;
+    box-shadow: 1px 1px 5px 10px rgba($black, 0.1);
+  }
+
+  &__innerArea__postList__item__link__thumbArea {
+    @include u-imgText;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__innerArea__postList__item__link__thumbArea__textArea {
+    padding: 15px;
+  }
+
+  &__innerArea__postList__item__link__thumbArea__textArea__time {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+
+  &__innerArea__postList__item__link__thumbArea__textArea__postTitle {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+}
+
+/*-----------------------------------------------
+archiveNewsPageContentSec(SP)
+------------------------------------------------*/
+@include u-mqMax {
+  .archiveNewsPageContentSec {}
+}

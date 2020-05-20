@@ -1,0 +1,29 @@
+- const siteTitle = `サイトタイトル`
+    if pageTitle==siteTitle
+        title #{siteTitle}
+    else
+        title #{pageTitle} | #{siteTitle}
+meta(charset=`utf-8`)
+meta(http-equiv=`X-UA-Compatible` content=`IE=Edge`)
+meta(name=`format-detection` content=`telephone=no`)
+meta(name=`viewport` id=`viewport` content=`width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes`)
+//- meta(name=`description` content=`このWebサイトの説明が入ります。`)
+//- meta(name=`keywords` content=`キーワード,キーワード`)
+//- meta(property=`og:title` content=`このWebサイトのタイトルが入ります。`)
+//- meta(property=`og:type` content=`website`)
+//- meta(property=`og:description` content=`このWebサイトの説明が入ります。`)
+//- meta(property=`og:url` content=`http://XXXXXXXXXX.com`)
+//- meta(property=`og:image` content=`${relativePath}/_assets/images/_etc/ogp.jpg`)
+//- meta(property=`fb:app_id` content=`XXXXXXXXXXXXXXXX`)
+//- meta(name=`twitter:card` content=`summary`)
+//- meta(name=`twitter:site` content=`@XXXXX`)
+//- meta(name=`twitter:creator` content=`@XXXXX`)
+//- meta(name=`twitter:image:src` content=`${relativePath}/_assets/images/_etc/ogp.jpg`)
+link(rel=`shortcut icon` href=`${relativePath}/_assets/images/_etc/favicon.ico`)
+link(rel=`stylesheet` media=`print,screen` href=`https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css`)
+link(rel=`stylesheet` media=`print,screen` href=`${relativePath}/_assets/js/lib/swiper/swiper.css`)
+link(rel=`stylesheet` media=`print,screen` href=`${relativePath}/_assets/css/style.css`)
+script(src=`https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js`)
+script(src=`https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js`)
+script(src=`${relativePath}/_assets/js/lib/swiper/swiper.js`)
+script(src=`${relativePath}/_assets/js/script.js`)

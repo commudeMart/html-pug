@@ -1,0 +1,87 @@
+/*====================================================================
+topPageFvSec
+====================================================================*/
+.topPageFvSec {
+  &__sliderArea__slideList__item {
+    @include u-imgText;
+    height: calc(100vh - #{$headerHeightPC});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/*-----------------------------------------------
+topPageFvSec(SP)
+------------------------------------------------*/
+@include u-mqMax {
+  .topPageFvSec {}
+}
+
+
+
+
+/*====================================================================
+topPageNewsSec
+====================================================================*/
+.topPageNewsSec {
+  padding: 50px 0;
+
+  &__innerArea {
+    @include u-contentCenter;
+  }
+
+  &__innerArea__title {
+    @include u-secTitle;
+  }
+
+  &__innerArea__postList {
+    margin-top: 30px;
+  }
+
+  &__innerArea__postList__item {
+    margin-top: 20px;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  &__innerArea__postList__item__link {
+    @include u-flex;
+    @include u-trsPC;
+    @include u-hoverOp;
+  }
+
+  %__innerArea__postList__item__link__textPC {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+
+  &__innerArea__postList__item__link__time {
+    @extend %__innerArea__postList__item__link__textPC;
+    width: 90px;
+  }
+
+  &__innerArea__postList__item__link__postTitle {
+    @extend %__innerArea__postList__item__link__textPC;
+    width: calc(99% - 90px);
+  }
+
+  &__innerArea__bnrArea {
+    @include u-flex($jc: center);
+    margin-top: 40px;
+  }
+
+  &__innerArea__bnrArea__bnr {
+    @include u-bnr;
+  }
+}
+
+/*-----------------------------------------------
+topPageNewsSec(SP)
+------------------------------------------------*/
+@include u-mqMax {
+  .topPageNewsSec {}
+}
