@@ -1,0 +1,78 @@
+/*====================================================================
+siteHeader
+====================================================================*/
+header {
+  &.siteHeader {
+    width: 100%;
+    height: $headerHeightPC;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: tomato;
+    box-shadow: 1px 1px 6px 4px rgba($black, 0.04);
+    z-index: 100;
+
+    .is_login_user & {
+      top: $wpAdminBarPC;
+    }
+
+    &__innerArea {
+      @include u-contentCenter($widthPC: $contentCenter, $paddingLR-PC: 15px, $paddingLR-SP: 15px);
+      @include u-flex($jc: space-between, $ai: center);
+    }
+
+    &__logo {
+      width: 60px;
+    }
+
+    &__logo__link {
+      @include u-trsPC;
+      @include u-hoverOp;
+      display: block;
+    }
+
+
+    // gNavArea
+    &__gNavArea__pageList {
+      @include u-flex($ai: center);
+    }
+
+    &__gNavArea__pageList__item__link {
+      @include u-trsPC;
+      @include u-hoverOp;
+      padding: 0 15px;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+    }
+  }
+
+
+  // sample
+  .header__nav {
+    position: relative;
+    width: 100%;
+
+    &__list {
+      @include u-flex($jc: flex-start, $ai: center);
+
+      &__item {
+        margin-right: 20px;
+
+        &__link {
+          color: #fff;
+        }
+
+        &.is-current {
+
+          .header__nav__list__item__link {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

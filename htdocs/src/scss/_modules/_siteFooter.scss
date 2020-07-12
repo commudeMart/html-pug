@@ -1,0 +1,16 @@
+/*====================================================================
+siteFooter
+====================================================================*/
+footer {
+  &.siteFooter {
+    background-color: $darkGray;
+    padding: 40px 0;
+
+    .copyrights {
+      text-align: center;
+      font: normal 12px/1.7 $NotosansJP;
+      letter-spacing: 1px;
+      color: $lightGray;
+    }
+  }
+}
