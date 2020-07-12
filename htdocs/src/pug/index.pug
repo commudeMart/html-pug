@@ -1,0 +1,166 @@
+//- META INFORMATION
+- const page_title = 'Website Name'
+- const relativePath = '.'
+- const meta_title = 'this is meta title'
+- const meta_keywords = 'this is meta keyworks'
+- const meta_description = 'this is meta description'
+- const meta_og_url = 'http://website.com'
+- const currentPage = 'home'
+
+//- EXTERNAL LIBRARIES
+- const isJquery = true
+- const isWowEffects = false
+- const isSwiper = true
+
+
+//- CONTENT DATA
+-
+    //- Accordions
+    const accordions = [
+        { title: 'Title 1', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' },
+        { title: 'Title 2', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' },
+        { title: 'Title 3', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.' },
+    ];
+
+    //- KV Slider
+    const kv_slider = [
+        { image: 'topKVSlide_01.jpg', text: 'Slide 1' },
+        { image: 'topKVSlide_02.jpg', text: 'Slide 2' },
+        { image: 'topKVSlide_03.jpg', text: 'Slide 3' },
+    ];
+
+    //- Custom select
+    const countries = [
+        { name: 'Australia', value: '0'},
+        { name: 'Philippines', value: '1'},
+        { name: 'Japan', value: '2'},
+        { name: 'Mexico', value: '3'},
+    ];
+
+
+
+doctype html
+html(lang="ja")
+    head
+        //- HEAD
+        include ./_inc/_head.pug
+    
+    
+    body.topPage
+        //- HEADER
+        include ./_inc/_siteHeader.pug
+        
+        //- MAIN CONTENT
+        main.siteContent(role="main")
+            section.sec01
+                -
+                    const card = [
+                      {
+                        num: '01',
+                        link: 'test_01',
+                        title: 'h1_01',
+                        text: 'text_01',
+                      },
+                      {
+                        num: '02',
+                        link: 'test_02',
+                        title: 'h1_02',
+                        text: 'text_02',
+                      },
+                      {
+                        num: '03',
+                        link: 'test_03',
+                        title: 'h1_03',
+                        text: 'text_03',
+                      },
+                    ]
+                ul.cardList01
+                    each item, index in card
+                        li.cardList01__item
+                            a.cardList01__link(href="#")
+                                figure.cardList01__thumb
+                                    img.cardList01__img(src=`${relativePath}/sample_img_${item.num}.png` alt="#")
+                                    figcaption.cardList01__caption
+                                h3.cardList01__title #{item.title}
+                                p.cardList01__desc #{item.text}
+            section.sec02
+                ul.cardList02
+                    - for (var x = 0; x < 6; x++)
+                        li.cardList02__item
+                            a.cardList02__link(href="#")
+                                figure.cardList02__thumb
+                                    img.cardList01__img(src=`https://placehold.jp/300x300.png` alt="#")
+                                    figcaption.cardList02__caption Name
+
+            //- KV Slider
+            .kv__slider
+                #test_slider.js-kv__slider.swiper-container
+                    .swiper-wrapper: each slider_item in kv_slider
+                        .swiper-slide
+                            .kv__slider__item
+                                //- img(class="kv__slider__item__img" href=`${relativePath}/assets/img/top/`+`${slider_item.image}` alt=`${slider_item.text}`)
+                                h6.kv__slider__item__text= slider_item.text
+                |
+                |
+                .kv__slider__pagi.swiper-pagination
+                .kv__slider__next.swiper-button-next
+                .kv__slider__prev.swiper-button-prev
+            |
+            |
+
+            //- Inner Container
+            .inner__cont
+
+                //- SECTION 1
+                section.section.sec01
+
+                    h4.section__title ACCORDION
+
+                    //- ACCORDION
+                    .accordion: each acc_item in accordions
+                        .accordion__item
+                            .accordion__item__head
+                                h6.accordion__item__head__title= acc_item.title
+                                .accordion__item__head__arrow
+                            .accordion__item__body
+                                p.accordion__item__body__text= acc_item.text
+                |
+                |
+
+                //- SECTION 2
+                section.section.sec02
+
+                    h4.section__title CUSTOM SELECT
+
+                    //- CUSTOM SELECT Tag
+                    .custom-select
+                        select: each country_item in countries
+                            option(value=`${country_item.value}`)= country_item.name
+                |
+                |
+
+                //- SECTION 3
+                section.section.sec03
+
+                    h4.section__title MODAL
+
+                    //- Modal trigger button
+                    .modal__button.js-openModal OPEN MODAL
+
+
+                //- DUMMY SPACE
+                .dummy
+            |
+            |
+
+            //- MODAL
+            .modal
+                .modal__box
+                    .modal__box__closeButton
+                    .modal__box__content
+
+                
+        |
+        |
+        //- FOOTER
+        include ./_inc/_siteFooter.pug
