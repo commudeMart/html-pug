@@ -1,5 +1,5 @@
 
-- 
+-
     let main_menu = [
             {title: "HOME", slug: "home", link: "."},
             {title: "ABOUT US", slug: "about", link: "about"},
@@ -8,8 +8,8 @@
         ];
 
 header.siteHeader
-    .inner__cont
-        nav.header__nav(role='navigator')
-            ul.header__nav__list: each item in main_menu
-                li.header__nav__list__item(class=(item.slug==currentPage ? "is-current" : ''))
-                    a.header__nav__list__item__link(href=`${relativePath}/`+`${item.link}`)= item.title
+    .siteHeader__inner
+        nav.siteHeader__nav(role='navigator')
+            ul.siteHeader__navList: each item in main_menu
+                li.siteHeader__navItem(class=(item.slug==currentPage ? "is-current" : ''))
+                    a.siteHeader__navItemLink(href=`${relativePath}/`+`${item.link}`)= item.title
